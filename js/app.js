@@ -49,3 +49,17 @@
         return (this.tab === checkTab);
       }
     });
+
+    myApp.controller('ContactController', ['$scope', function($scope) {
+      $scope.feedback = {
+        myChannel: "",
+        firstName: "",
+        lastName: "",
+        agree: "",
+        email: ""
+      };
+    }]);
+
+    myApp.controller('FeedBackController', ['$scope', function($scope) {
+      
+    }]);
