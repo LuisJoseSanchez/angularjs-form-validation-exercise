@@ -1,2 +1,2 @@
-# angularjs-form-validation-exercise
+# AngularJS form validation exercise
 Form validation exercise using AngularJS
