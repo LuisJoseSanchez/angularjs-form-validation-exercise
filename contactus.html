@@ -175,7 +175,9 @@
           
           <!-- Conctact you? -->
           
-          <div class="form-group">
+          <div
+            class="form-group"
+            ng-class="{ 'has-error': invalidChannelSelection }">
             <div class="checkbox col-sm-5 col-sm-offset-2">
               <label class="checkbox-inline">
                 <input type="checkbox" name="approve" value="" ng-model="feedback.agree">
@@ -189,6 +191,7 @@
                 ng-options="channel.value as channel.label for channel in channels">
                 <option value="">Tel. or Email</option>
               </select>
+              <span ng-show="invalidChannelSelection" class="help-block"></span>
             </div>
           </div>
           
@@ -207,13 +210,26 @@
               </textarea>
             </div>
           </div>
+          
+          <!-- Submit button -->
           <div class="form-group">
             <div class="col-sm-offset-2 col-sm-10">
-              <button type="submit" class="btn btn-primary">Send Feedback</button>
+              <button
+                type="submit"
+                class="btn btn-primary"
+                ng-disabled="feedbackForm.$invalid">
+                Send Feedback
+              </button>
             </div>
           </div>
+          
         </form>
+        
       </div>
+      
+      
+      <!-- Show info -->
+      
       <div class="col-xs-12 col-sm-3">
         <h3>Your current Feedback:</h3>
         <p>{{ feedback.firstName }} {{ feedback.lastName | uppercase }}</p>
