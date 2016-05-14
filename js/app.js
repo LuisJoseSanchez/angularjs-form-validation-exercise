@@ -1,5 +1,5 @@
     var myApp = angular.module('confusionApp', []);
-    myApp.controller('menuController', function() {
+    myApp.controller('MenuController', function() {
       
       this.tab = 1;
       
@@ -60,6 +60,6 @@
       };
     }]);
 
-    myApp.controller('FeedBackController', ['$scope', function($scope) {
+    myApp.controller('FeedbackController', ['$scope', function($scope) {
       
     }]);
