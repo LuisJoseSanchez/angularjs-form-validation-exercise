@@ -58,6 +58,14 @@
         agree: "",
         email: ""
       };
+      
+      $scope.channels = [
+        {value: "tel", label: "Tel."},
+        {value: "Email", label: "Email"}
+      ];
+      
+      $scope.invalidChannelSelection = false;
+      
     }]);
 
     myApp.controller('FeedbackController', ['$scope', function($scope) {
